@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 body{
     margin: 0;
+    font-family: 'Alata';
 }
 
 h1, h2, h3{
     margin: 0;
 }
 
+.titleName{
+    font-family: 'Fjalla One';
+}
+
 a{
     text-decoration: none;
     list-style: none;
+    color: white;
 }

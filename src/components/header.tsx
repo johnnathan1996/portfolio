@@ -1,8 +1,10 @@
 import React from "react";
 import { Nav } from "../types";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import logo from '../images/logo.png';
 import banner from '../images/banner.jpg';
+import '../global.css'
+
 
 interface navProps {
     nav: Nav
@@ -29,8 +31,10 @@ const navItems: Array<Nav> = [
 
 const HeaderStyle = styled.div`
     height: 100vh;
-    background: red;
     background-image: url(${banner});
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const List = styled.ul`
@@ -47,12 +51,65 @@ const Logo = styled.img`
     width: 110px;
 `
 const NavigationStyle = styled.div`
+    position: fixed;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 1024px;
     margin: 0 auto;
+`
+
+const scroll = keyframes`
+  20%, 100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+`
+
+const ScrollDown = styled.div`
+width: 30px;
+height: 50px;
+bottom: 3%;
+margin-left: -15px;
+margin-top: -25px;
+box-shadow: inset 0 0 0 1px #fff;
+border-radius: 25px;
+position: absolute;
+left: 50%;
+
+:before {
+content: '';
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  margin-left: -3px;
+  bottom: 8px;
+  border-radius: 4px;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: ${scroll};
+  position: absolute;
+  left: 50%;
+}
+`
+
+const TitleName = styled.div`
+    flex-grow: 1;
+    display: inline-flex;
+    align-items: center;
+`
+
+const Title = styled.h1`
+    color: white;
+    font-size: 100px;
+    text-transform: capitalize;
 `
 
 const Navigation: React.FC<navProps> = ({ nav }) => {
@@ -64,7 +121,7 @@ const Navigation: React.FC<navProps> = ({ nav }) => {
 }
 
 export const Header = () => {
-    return <HeaderStyle>
+    return <><HeaderStyle>
         <NavigationStyle>
             <Logo src={logo} alt="Logo" />
             <List>
@@ -73,7 +130,14 @@ export const Header = () => {
                 })}
             </List>
         </NavigationStyle>
+
+                <TitleName>
+                    <Title className="titleName">john-nathan</Title>
+                </TitleName>
         
 
+        <ScrollDown />
+
     </HeaderStyle>
+    </>
 }
