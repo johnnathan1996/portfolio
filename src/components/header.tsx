@@ -84,7 +84,7 @@ position: absolute;
 left: 50%;
 
 :before {
-content: '';
+    content: '';
   width: 6px;
   height: 6px;
   background: #fff;

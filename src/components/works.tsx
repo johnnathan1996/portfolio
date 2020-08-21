@@ -19,13 +19,30 @@ const DisplayWorks = styled(Col)`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    :before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity:0.5;
+        top: 100%;
+        transition: top 0.3s;$
+        cursor: pointer;
+    }
+
+    :hover:before{
+        top: 0;
+    }
 `;
 
 const WorksImages = styled.img`
-    width: 170%;
+    width: 100%;
+    object-fit: cover;
+    height: 310px;
 `;
-
-
 
 
 export const Works = () => {
