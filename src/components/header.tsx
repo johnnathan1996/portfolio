@@ -2,7 +2,7 @@ import React from "react";
 import { Nav } from "../types";
 import styled, { keyframes } from 'styled-components';
 import logo from '../images/logo.png';
-import banner from '../images/banner.jpg';
+import { Parallax } from 'react-parallax';
 import '../global.css'
 
 
@@ -31,7 +31,6 @@ const navItems: Array<Nav> = [
 
 const HeaderStyle = styled.div`
     height: 100vh;
-    background-image: url(${banner});
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,23 +120,33 @@ const Navigation: React.FC<navProps> = ({ nav }) => {
 }
 
 export const Header = () => {
-    return <><HeaderStyle>
-        <NavigationStyle>
-            <Logo src={logo} alt="Logo" />
-            <List>
-                {navItems.map(navItem => {
-                    return <Navigation nav={navItem} />
-                })}
-            </List>
-        </NavigationStyle>
+    return <>
+
+        <Parallax
+            bgImage={require("../images/banner.jpg")}
+            bgImageAlt="Banner"
+            strength={200}
+        >
+            <HeaderStyle>
+
+                <NavigationStyle>
+                    <Logo src={logo} alt="Logo" />
+                    <List>
+                        {navItems.map(navItem => {
+                            return <Navigation nav={navItem} />
+                        })}
+                    </List>
+                </NavigationStyle>
 
                 <TitleName>
                     <Title className="titleName">john-nathan</Title>
                 </TitleName>
-        
 
-        <ScrollDown />
+                <ScrollDown />
 
-    </HeaderStyle>
+            </HeaderStyle>
+        </Parallax>
+
+
     </>
 }
