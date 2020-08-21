@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { Col, Row } from 'react-styled-flexboxgrid'
 
 const HeaderStyle = styled.div`
   background: blue;

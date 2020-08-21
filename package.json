@@ -15,6 +15,7 @@
     "react-dom": "^16.13.1",
     "react-parallax": "^3.0.3",
     "react-scripts": "3.4.3",
+    "react-styled-flexboxgrid": "^3.2.1",
     "styled-components": "^5.1.1",
     "typescript": "~3.7.2"
   },
