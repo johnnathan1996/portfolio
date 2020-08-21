@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import { Col, Row } from 'react-styled-flexboxgrid'
+import { Col } from 'react-styled-flexboxgrid'
 import { Parallax } from 'react-parallax';
 
 const Container = styled.div`
