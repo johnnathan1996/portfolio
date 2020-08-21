@@ -58,6 +58,9 @@ export const Works = () => {
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/7.jpg')} alt="MediaCollect" />
             </DisplayWorks>
+            <DisplayWorks xs={3} >
+                <WorksImages src={require('../images/work/7.jpg')} alt="MediaCollect" />
+            </DisplayWorks>
 
         </Row>
 
