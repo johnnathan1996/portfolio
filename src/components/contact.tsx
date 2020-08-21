@@ -13,9 +13,36 @@ const TitleContact = styled.h1`
 `;
 
 const InputCol = styled(Col)`
-Background: red;
-height: 20px;
-margin: 10px 0;
+    margin: 10px 0;
+    padding: 0 10px;
+`;
+
+const InputForm = styled.input`
+    padding: 10px 1%;
+    border-radius: 4px;
+    border: 1px solid #EEE;
+    width: 98%;
+    -webkit-appearance: none;
+`
+
+const AreaForm = styled.textarea`
+    padding: 10px 1%;
+    border-radius: 4px;
+    border: 1px solid #EEE;
+    width: 98%;
+    -webkit-appearance: none;
+    max-height: 200px;
+    min-height: 90px;
+    min-width: 98%;
+    max-width: 98%;
+`
+
+const InputButton = styled.a`
+    background: #2c3e50;
+    width: 100%;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 5px;
 `;
 
 export const Contact = () => {
@@ -25,25 +52,33 @@ export const Contact = () => {
         </TitleContact>
 
         <Grid>
-            <Row>
-                <InputCol xs={6}>Prenom</InputCol>
-                <InputCol xs={6}>Nom</InputCol>
-            </Row>
-            <Row>
-                <InputCol xs={12}>email</InputCol>
-            </Row>
-            <Row>
-                <InputCol xs={12}>Message</InputCol>
-            </Row>
-            <Row>
-                <InputCol xs={12}>
-                    <Mailto email="johnkodokan@gmail.be" subject="Hello and Welcome" body="Hello world!">
-                        Envoyer
-                    </Mailto>
+            <Row center="xs">
+                <InputCol xs={5}>
+                    <InputForm type="text" placeholder="Prénom" />
+                </InputCol>
+                <InputCol xs={5}>
+                    <InputForm type="text" placeholder="Nom" />
                 </InputCol>
             </Row>
-
-
+            <Row center="xs">
+                <InputCol xs={10}>
+                    <InputForm type="text" placeholder="Email" />
+                </InputCol>
+            </Row>
+            <Row center="xs">
+                <InputCol xs={10}>
+                    <AreaForm placeholder="Message"/>
+                </InputCol>
+            </Row>
+            <Row center="xs">
+                <Col xs={1}>
+                    <Row center="xs">
+                        <Mailto email="johnkodokan@gmail.be" subject="Hello and Welcome" body="Hello world!">
+                            Envoyer
+                    </Mailto>
+                    </Row>
+                </Col>
+            </Row>
         </Grid>
 
     </Container>
@@ -57,6 +92,6 @@ function Mailto({ email, subject, body, ...props }: {
     body: string;
 }) {
     return (
-        <a href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`}>{props.children}</a>
+        <InputButton href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`}>{props.children}</InputButton>
     );
 }
