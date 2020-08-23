@@ -12,7 +12,7 @@ const TitleWorks = styled.h1`
 `;
 
 const DisplayWorks = styled(Col)`
-    height: 310px;
+    height: 40vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -36,6 +36,10 @@ const DisplayWorks = styled(Col)`
     :hover:before{
         top: 0;
     }
+
+    :hover figcaption{
+        opacity: 1;
+    }
 `;
 
 const WorksImages = styled.img`
@@ -43,6 +47,18 @@ const WorksImages = styled.img`
     object-fit: cover;
     height: 310px;
 `;
+
+const WorksFigcaption = styled.figcaption`
+    position: absolute;
+    opacity: 0;
+    top: 20vh;
+    color: white;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.2s;
+`;
+
+
 
 
 export const Works = () => {
@@ -55,28 +71,36 @@ export const Works = () => {
 
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/1.jpg')} alt="STEAM" />
+                <WorksFigcaption>STEAM</WorksFigcaption>
             </DisplayWorks>
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/2.jpg')} alt="Bossuyt" />
+                <WorksFigcaption>Bossuyt</WorksFigcaption>
             </DisplayWorks>
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/3.jpg')} alt="Lets be Nice" />
+                <WorksFigcaption>Lets be Nice</WorksFigcaption>
             </DisplayWorks>
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/4.jpg')} alt="Spielberg" />
+                <WorksFigcaption>TFE</WorksFigcaption>
             </DisplayWorks>
 
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/5.jpg')} alt="Sobema" />
+                <WorksFigcaption>Sobema</WorksFigcaption>
             </DisplayWorks>
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/6.jpg')} alt="Flutter" />
+                <WorksFigcaption>Flutter</WorksFigcaption>
             </DisplayWorks>
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/7.jpg')} alt="MediaCollect" />
+                <WorksFigcaption>MediaCollect</WorksFigcaption>
             </DisplayWorks>
             <DisplayWorks xs={3} >
                 <WorksImages src={require('../images/work/7.jpg')} alt="MediaCollect" />
+                <WorksFigcaption>MediaCollect</WorksFigcaption>
             </DisplayWorks>
 
         </Row>
