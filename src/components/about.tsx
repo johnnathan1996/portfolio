@@ -5,9 +5,11 @@ import { Parallax } from 'react-parallax';
 
 const Container = styled.div`
     height: 80vh;
+    width: 1024px;
+    margin: 0 auto;
     padding: 10vh 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 `;
 
@@ -23,6 +25,7 @@ const DisplayText = styled(Col)`
 
 const DisplayImage = styled(Col)`
     height: 100%;
+    margin-top: 100px;
 `;
 
 
@@ -39,9 +42,8 @@ export const About = () => {
         <DisplayText xs={5} >
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-            </DisplayText>
+            Lorem ipsum dolor sit amet, consectetur adipiscing
+        </DisplayText>
 
 
         <DisplayImage xs={5} >
