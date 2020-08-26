@@ -10,6 +10,17 @@ const Container = styled.div`
 const TitleWorks = styled.h1`
     text-align: center;
     margin: 20px 0 30px 0;
+
+    ::after{
+        content: "";
+        background: #2c3e50;
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        position: absolute;
+        left: CALC(50% - 2px);
+        bottom: -6px;
+    }
 `;
 
 const DisplayWorks = styled(Col)`

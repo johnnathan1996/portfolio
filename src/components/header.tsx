@@ -92,17 +92,17 @@ left: 50%;
 
 :before {
     content: '';
-  width: 6px;
-  height: 6px;
-  background: #fff;
-  margin-left: -3px;
-  bottom: 8px;
-  border-radius: 4px;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-name: ${scroll};
-  position: absolute;
-  left: 50%;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    margin-left: -3px;
+    bottom: 8px;
+    border-radius: 4px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: ${scroll};
+    position: absolute;
+    left: 50%;
 }
 `
 
