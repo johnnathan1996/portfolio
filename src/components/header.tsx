@@ -62,7 +62,7 @@ const NavigationContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
 `
 
@@ -116,6 +116,7 @@ const Title = styled.h1`
     color: white;
     font-size: 100px;
     text-transform: capitalize;
+    text-align: center;
 `
 
 const Navigation: React.FC<navProps> = ({ nav }) => {
@@ -141,7 +142,7 @@ export const Header = () => {
   const navRef = useRef()
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 670
+      const show = window.scrollY > (window.innerHeight - 100)
       if (navRef.current !== show) {
         setNavBackground(show)
       }
@@ -150,7 +151,7 @@ export const Header = () => {
     return () => {
       document.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, []);
 
 
 
