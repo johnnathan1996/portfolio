@@ -5,6 +5,9 @@ import { Grid, Col, Row } from 'react-styled-flexboxgrid'
 const Container = styled.div`
     height: 80vh;
     padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 
 const TitleContact = styled.h1`
@@ -56,41 +59,98 @@ const InputButton = styled.a`
     border-radius: 5px;
 `;
 
+const Footer = styled.footer`
+    background: #2c3e50;
+`
+
+const FooterContainer = styled.div`
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        color: white;
+        font-size: 12px;
+    }
+`
+
+const IconImg = styled.img`
+    width: 15px;
+    margin-left: 10px;
+
+`
+
+const FooterList = styled.ul`
+    display: flex;
+`
+
 export const Contact = () => {
     return <Container id="Contact">
-        <TitleContact>
-            Contact
+        <div>
+            <TitleContact>
+                Contact
         </TitleContact>
 
-        <Grid>
-            <Row center="xs">
-                <InputCol xs={5}>
-                    <InputForm type="text" placeholder="Prénom" />
-                </InputCol>
-                <InputCol xs={5}>
-                    <InputForm type="text" placeholder="Nom" />
-                </InputCol>
-            </Row>
-            <Row center="xs">
-                <InputCol xs={10}>
-                    <InputForm type="text" placeholder="Email" />
-                </InputCol>
-            </Row>
-            <Row center="xs">
-                <InputCol xs={10}>
-                    <AreaForm placeholder="Message"/>
-                </InputCol>
-            </Row>
-            <Row center="xs">
-                <Col xs={1}>
-                    <Row center="xs">
-                        <Mailto email="johnkodokan@gmail.be" subject="Hello and Welcome" body="Hello world!">
-                            Envoyer
+            <Grid>
+                <Row center="xs">
+                    <InputCol xs={5}>
+                        <InputForm type="text" placeholder="Prénom" />
+                    </InputCol>
+                    <InputCol xs={5}>
+                        <InputForm type="text" placeholder="Nom" />
+                    </InputCol>
+                </Row>
+                <Row center="xs">
+                    <InputCol xs={10}>
+                        <InputForm type="text" placeholder="Email" />
+                    </InputCol>
+                </Row>
+                <Row center="xs">
+                    <InputCol xs={10}>
+                        <AreaForm placeholder="Message" />
+                    </InputCol>
+                </Row>
+                <Row center="xs">
+                    <Col xs={1}>
+                        <Row center="xs">
+                            <Mailto email="johnkodokan@gmail.be" subject="Hello and Welcome" body="Hello world!">
+                                Envoyer
                     </Mailto>
-                    </Row>
-                </Col>
-            </Row>
-        </Grid>
+                        </Row>
+                    </Col>
+                </Row>
+            </Grid>
+        </div>
+
+        <Footer>
+            <FooterContainer>
+                <p>Copyright © 2020 | Portfolio de John-Nathan Michielsens</p>
+                <FooterList>
+                    <a href="https://www.facebook.com/johnnathan.michielsens1" target="_blank">
+                        <li>
+                            <IconImg alt="icon" src={require('../images/svg/facebook-logo.svg')} />
+                        </li>
+                    </a>
+                    <a href="https://www.instagram.com/john_nathan96/" target="_blank">
+                        <li>
+                            <IconImg alt="icon" src={require('../images/svg/insta.svg')} />
+                        </li>
+                    </a>
+                    <a href="https://www.linkedin.com/in/john-nathan-michielsens/" target="_blank">
+                        <li>
+                            <IconImg alt="icon" src={require('../images/svg/linkedin-sign.svg')} />
+                        </li>
+                    </a>
+                    <a href="https://github.com/johnnathan1996" target="_blank">
+                        <li>
+                            <IconImg alt="icon" src={require('../images/svg/github-logo.svg')} />
+                        </li>
+                    </a>
+                </FooterList>
+            </FooterContainer>
+        </Footer>
 
     </Container>
 }

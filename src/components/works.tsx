@@ -29,7 +29,14 @@ const DisplayWorks = styled(Col)`
     padding: 0;
     overflow: hidden;
     position: relative;
-    display: flex !important;
+`;
+
+const WorksImages = styled.img`
+    width: 50%;
+`;
+const ImageLink = styled.a`
+    display: flex;
+    height: 100%;
     align-items: center;
     justify-content: center;
 
@@ -47,11 +54,7 @@ const DisplayWorks = styled(Col)`
     :hover:before{
         opacity: 0;
     }
-`;
-
-const WorksImages = styled.img`
-    width: 50%;
-`;
+`
 
 export const Works = () => {
     return <Container id="Works">
@@ -60,26 +63,43 @@ export const Works = () => {
         </TitleWorks>
 
         <Row>
+
             <DisplayWorks xs={6} md={4} style={{ background: '#1D6FF7' }}>
-                <WorksImages src={require('../images/work/gluon_logo.png')} alt="STEAM" />
-            </DisplayWorks>
-            <DisplayWorks xs={6} md={4} style={{ background: '#ffffff' }}>
-                <WorksImages src={require('../images/work/bossuyt_logo.png')} alt="Bossuyt" />
-            </DisplayWorks>
-            <DisplayWorks xs={6} md={4} style={{ background: '#3c6382' }}>
-                <WorksImages src={require('../images/work/lbn_logo.png')} alt="Lets be Nice" />
+                <ImageLink href="http://johnmichielsens.be/Works/RGB/" target="_blank">
+                    <WorksImages src={require('../images/work/gluon_logo.png')} alt="STEAM" />
+                </ImageLink>
             </DisplayWorks>
 
             <DisplayWorks xs={6} md={4} style={{ background: '#ffffff' }}>
-                <WorksImages src={require('../images/work/spielberg_logo.png')} alt="Spielberg" />
+                <ImageLink href="https://www.bakkerij-bossuyt.be/" target="_blank">
+                    <WorksImages src={require('../images/work/bossuyt_logo.png')} alt="Bossuyt" />
+                </ImageLink>
             </DisplayWorks>
-            <DisplayWorks xs={6} md={4} style={{ background: '#829dcf' }}>
-                <WorksImages src={require('../images/work/parked_logo.png')} alt="Parked" />
+
+            <DisplayWorks xs={6} md={4} style={{ background: '#3c6382' }}>
+                <ImageLink href="http://johnmichielsens.be/Works/lbn/" target="_blank">
+                    <WorksImages src={require('../images/work/lbn_logo.png')} alt="Lets be Nice" />
+                </ImageLink>
             </DisplayWorks>
+
             <DisplayWorks xs={6} md={4} style={{ background: '#ffffff' }}>
-                <WorksImages src={require('../images/work/sobema_logo.png')} alt="Sobema" />
+                <ImageLink href="http://johnmichielsens.be/Works/popup/" target="_blank">
+                    <WorksImages src={require('../images/work/spielberg_logo.png')} alt="Spielberg" />
+                </ImageLink>
             </DisplayWorks>
-            
+
+            <DisplayWorks xs={6} md={4} style={{ background: '#829dcf' }}>
+                <ImageLink href="https://github.com/johnnathan1996/Parked" target="_blank">
+                    <WorksImages src={require('../images/work/parked_logo.png')} alt="Parked" />
+                </ImageLink>
+            </DisplayWorks>
+
+            <DisplayWorks xs={6} md={4} style={{ background: '#ffffff' }}>
+                <ImageLink href="http://www.sobema.be/" target="_blank">
+                    <WorksImages src={require('../images/work/sobema_logo.png')} alt="Sobema" />
+                </ImageLink>
+            </DisplayWorks>
+
         </Row>
 
 
