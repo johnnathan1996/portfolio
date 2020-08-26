@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
 
 const Container = styled.div`
-  height: 90vh;
-  padding-top: 10vh
+    height: 80vh;
+    padding-top: 20vh;
 `;
 
 const TitleContact = styled.h1`

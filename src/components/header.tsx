@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useRef, useEffect} from "react";
 import { Nav } from "../types";
 import styled, { keyframes } from 'styled-components';
 import logo from '../images/logo.png';
@@ -49,9 +49,16 @@ const ListItem = styled.li`
 const Logo = styled.img`
     width: 110px;
 `
+
 const NavigationStyle = styled.div`
+    width: 100%;
+    padding: 20px 0;
     position: fixed;
-    padding: 20px;
+    z-index: 99;
+    transition: background 0.2s, padding 0.2s;
+`
+
+const NavigationContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,14 +119,14 @@ const Title = styled.h1`
 `
 
 const Navigation: React.FC<navProps> = ({ nav }) => {
-    return <Link 
+    return <Link
         activeClass="active"
-        className="test6"
+        className="navigationlink"
         to={nav.label}
         spy={true}
         smooth={true}
         duration={500}
-        >
+    >
         <ListItem>
             {nav.label}
         </ListItem>
@@ -129,22 +136,51 @@ const Navigation: React.FC<navProps> = ({ nav }) => {
 
 
 export const Header = () => {
+    const [navBackground, setNavBackground] = useState(false)
+
+  const navRef = useRef()
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 670
+      if (navRef.current !== show) {
+        setNavBackground(show)
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+
+
     return <div id="Home">
 
-<Parallax
+        <Parallax
             bgImage={require("../images/banner.jpg")}
             bgImageAlt="Banner"
             strength={200}
         >
             <HeaderStyle>
 
-                <NavigationStyle>
-                    <Logo src={logo} alt="Logo" />
-                    <List>
-                        {navItems.map(navItem => {
-                            return <Navigation nav={navItem} />
-                        })}
-                    </List>
+                <NavigationStyle className={navBackground ? 'scrollactive' : ''}>
+                    <NavigationContainer>
+                    <Link
+                        activeClass="active"
+                        className="navigationlink"
+                        to="Home"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                    >
+                        <Logo src={logo} alt="Logo" />
+                        </Link>
+                        <List>
+                            {navItems.map(navItem => {
+                                return <Navigation nav={navItem} />
+                            })}
+                        </List>
+                    </NavigationContainer>
                 </NavigationStyle>
 
                 <TitleName>

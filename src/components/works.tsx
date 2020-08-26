@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { Col, Row } from 'react-styled-flexboxgrid'
 
 const Container = styled.div`
-  height: 100vh;
+    height: 93vh;
+    padding-top: 7vh;
 `;
 
 const TitleWorks = styled.h1`
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 20px 0 30px 0;
 `;
 
 const DisplayWorks = styled(Col)`

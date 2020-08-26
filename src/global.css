@@ -20,4 +20,22 @@ a{
     text-decoration: none;
     list-style: none;
     color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+ul a.active::after{
+    content: "";
+    background: white;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    position: absolute;
+    left: CALC(50% - 2px);
+    bottom: -6px;
+}
+
+.scrollactive {
+    background: #2c3e50;
+    padding: 10px 0 !important;
 }
