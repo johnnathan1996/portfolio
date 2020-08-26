@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d2fc0e6e.chunk.css",
+    "main.js": "/static/js/main.727f6872.chunk.js",
+    "main.js.map": "/static/js/main.727f6872.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
+    "static/js/2.f862816c.chunk.js": "/static/js/2.f862816c.chunk.js",
+    "static/js/2.f862816c.chunk.js.map": "/static/js/2.f862816c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a289ab1b733878f273e5bec088693c51.js": "/precache-manifest.a289ab1b733878f273e5bec088693c51.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d2fc0e6e.chunk.css.map": "/static/css/main.d2fc0e6e.chunk.css.map",
+    "static/js/2.f862816c.chunk.js.LICENSE.txt": "/static/js/2.f862816c.chunk.js.LICENSE.txt",
+    "static/media/aboutMe.png": "/static/media/aboutMe.ef618a6a.png",
+    "static/media/banner.jpg": "/static/media/banner.6fe1bb06.jpg",
+    "static/media/facebook-logo.svg": "/static/media/facebook-logo.5589ccee.svg",
+    "static/media/github-logo.svg": "/static/media/github-logo.376bb23c.svg",
+    "static/media/gluon_logo.png": "/static/media/gluon_logo.230582dc.png",
+    "static/media/insta.svg": "/static/media/insta.96d5e449.svg",
+    "static/media/lbn_logo.png": "/static/media/lbn_logo.18c1430a.png",
+    "static/media/linkedin-sign.svg": "/static/media/linkedin-sign.e7e232eb.svg",
+    "static/media/sobema_logo.png": "/static/media/sobema_logo.a3c0b72c.png",
+    "static/media/spielberg_logo.png": "/static/media/spielberg_logo.6aacf447.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19ccc7f6.js",
+    "static/js/2.f862816c.chunk.js",
+    "static/css/main.d2fc0e6e.chunk.css",
+    "static/js/main.727f6872.chunk.js"
+  ]
+}
