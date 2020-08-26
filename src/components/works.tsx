@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Col, Row } from 'react-styled-flexboxgrid'
 
 const Container = styled.div`
-    height: 93vh;
+    min-height: 93vh;
     padding-top: 7vh;
 `;
 
@@ -17,10 +17,10 @@ const DisplayWorks = styled(Col)`
     margin: 0;
     padding: 0;
     overflow: hidden;
-    display: flex;
+    position: relative;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    position: relative;
 
     :before {
         content: '';
@@ -28,39 +28,19 @@ const DisplayWorks = styled(Col)`
         width: 100%;
         height: 100%;
         background: black;
-        opacity:0.5;
-        top: 100%;
-        transition: top 0.3s;$
+        opacity: 0.5;
+        transition: opacity 0.3s;
         cursor: pointer;
     }
 
     :hover:before{
-        top: 0;
-    }
-
-    :hover figcaption{
-        opacity: 1;
+        opacity: 0;
     }
 `;
 
 const WorksImages = styled.img`
-    width: 100%;
-    object-fit: cover;
-    height: 310px;
+    width: 50%;
 `;
-
-const WorksFigcaption = styled.figcaption`
-    position: absolute;
-    opacity: 0;
-    top: 20vh;
-    color: white;
-    width: 100%;
-    text-align: center;
-    transition: opacity 0.2s;
-`;
-
-
-
 
 export const Works = () => {
     return <Container id="Works">
@@ -69,41 +49,26 @@ export const Works = () => {
         </TitleWorks>
 
         <Row>
-
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/1.jpg')} alt="STEAM" />
-                <WorksFigcaption>STEAM</WorksFigcaption>
+            <DisplayWorks xs={6} md={4} style={{ background: '#1D6FF7' }}>
+                <WorksImages src={require('../images/work/gluon_logo.png')} alt="STEAM" />
             </DisplayWorks>
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/2.jpg')} alt="Bossuyt" />
-                <WorksFigcaption>Bossuyt</WorksFigcaption>
+            <DisplayWorks xs={6} md={4} style={{ background: '#ffffff' }}>
+                <WorksImages src={require('../images/work/bossuyt_logo.png')} alt="Bossuyt" />
             </DisplayWorks>
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/3.jpg')} alt="Lets be Nice" />
-                <WorksFigcaption>Lets be Nice</WorksFigcaption>
-            </DisplayWorks>
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/4.jpg')} alt="Spielberg" />
-                <WorksFigcaption>TFE</WorksFigcaption>
+            <DisplayWorks xs={6} md={4} style={{ background: '#3c6382' }}>
+                <WorksImages src={require('../images/work/lbn_logo.png')} alt="Lets be Nice" />
             </DisplayWorks>
 
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/5.jpg')} alt="Sobema" />
-                <WorksFigcaption>Sobema</WorksFigcaption>
+            <DisplayWorks xs={6} md={4} style={{ background: '#ffffff' }}>
+                <WorksImages src={require('../images/work/spielberg_logo.png')} alt="Spielberg" />
             </DisplayWorks>
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/6.jpg')} alt="Flutter" />
-                <WorksFigcaption>Flutter</WorksFigcaption>
+            <DisplayWorks xs={6} md={4} style={{ background: '#829dcf' }}>
+                <WorksImages src={require('../images/work/parked_logo.png')} alt="Parked" />
             </DisplayWorks>
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/7.jpg')} alt="MediaCollect" />
-                <WorksFigcaption>MediaCollect</WorksFigcaption>
+            <DisplayWorks xs={6} md={4} style={{ background: '#ffffff' }}>
+                <WorksImages src={require('../images/work/sobema_logo.png')} alt="Sobema" />
             </DisplayWorks>
-            <DisplayWorks xs={3} >
-                <WorksImages src={require('../images/work/7.jpg')} alt="MediaCollect" />
-                <WorksFigcaption>MediaCollect</WorksFigcaption>
-            </DisplayWorks>
-
+            
         </Row>
 
 
