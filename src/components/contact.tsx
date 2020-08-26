@@ -46,7 +46,7 @@ const InputButton = styled.a`
 `;
 
 export const Contact = () => {
-    return <Container>
+    return <Container id="Contact">
         <TitleContact>
             Contact
         </TitleContact>

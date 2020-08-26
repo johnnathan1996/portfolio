@@ -25,7 +25,7 @@ const DisplayText = styled(Col)`
 
 const DisplayImage = styled(Col)`
     height: 100%;
-    margin-top: 100px;
+    margin-top: 200px;
 `;
 
 
@@ -35,7 +35,7 @@ overflow: visible !important;
 
 
 export const About = () => {
-    return <Container>
+    return <Container id="About">
 
 
 

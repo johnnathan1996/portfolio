@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import logo from '../images/logo.png';
 import { Parallax } from 'react-parallax';
 import '../global.css'
-
+import { Link } from 'react-scroll'
 
 interface navProps {
     nav: Nav
@@ -112,17 +112,26 @@ const Title = styled.h1`
 `
 
 const Navigation: React.FC<navProps> = ({ nav }) => {
-    return <a href='#'>
+    return <Link 
+        activeClass="active"
+        className="test6"
+        to={nav.label}
+        spy={true}
+        smooth={true}
+        duration={500}
+        >
         <ListItem>
             {nav.label}
         </ListItem>
-    </a>
+
+    </Link>
 }
 
-export const Header = () => {
-    return <>
 
-        <Parallax
+export const Header = () => {
+    return <div id="Home">
+
+<Parallax
             bgImage={require("../images/banner.jpg")}
             bgImageAlt="Banner"
             strength={200}
@@ -147,6 +156,5 @@ export const Header = () => {
             </HeaderStyle>
         </Parallax>
 
-
-    </>
+    </div>
 }
