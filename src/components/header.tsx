@@ -108,15 +108,24 @@ left: 50%;
 
 const TitleName = styled.div`
     flex-grow: 1;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
 `
 
 const Title = styled.h1`
     color: white;
-    font-size: 100px;
-    text-transform: capitalize;
+    font-size: 70px;
+    text-transform: uppercase;
     text-align: center;
+`
+
+const Hline = styled.hr`
+    color: white;
+    border: 1px solid white;
+    width: 12%;
 `
 
 const Navigation: React.FC<navProps> = ({ nav }) => {
@@ -186,6 +195,8 @@ export const Header = () => {
 
                 <TitleName>
                     <Title className="titleName">john-nathan</Title>
+                    <Hline />
+                    <p>Web and app developper</p>
                 </TitleName>
 
                 <ScrollDown />

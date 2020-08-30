@@ -17,7 +17,6 @@ const Container = styled.div`
 const DisplayText = styled(Col)`
     line-height: 30px;
     color: rgb(100,100,100);
-    font-family: 'Montserrat';
     font-weight: 200;
     font-style: italic;
 `;

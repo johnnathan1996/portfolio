@@ -10,6 +10,7 @@ const Container = styled.div`
 const TitleWorks = styled.h1`
     text-align: center;
     margin: 20px 0 30px 0;
+    font-weight: bold;
 
     ::after{
         content: "";
@@ -46,7 +47,7 @@ const ImageLink = styled.a`
         width: 100%;
         height: 100%;
         background: black;
-        opacity: 0.5;
+        opacity: 0.2;
         transition: opacity 0.3s;
         cursor: pointer;
     }

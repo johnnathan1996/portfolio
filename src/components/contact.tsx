@@ -13,6 +13,7 @@ const Container = styled.div`
 const TitleContact = styled.h1`
     text-align: center;
     margin: 0 0 50px 0;
+    font-weight: bold;
 
     ::after{
         content: "";
@@ -37,6 +38,7 @@ const InputForm = styled.input`
     border: 1px solid #EEE;
     width: 98%;
     -webkit-appearance: none;
+    font-family: montserrat;
 `
 
 const AreaForm = styled.textarea`
@@ -49,6 +51,7 @@ const AreaForm = styled.textarea`
     min-height: 90px;
     min-width: 98%;
     max-width: 98%;
+    font-family: montserrat;
 `
 
 const InputButton = styled.a`
@@ -131,11 +134,6 @@ export const Contact = () => {
                     <a href="https://www.facebook.com/johnnathan.michielsens1" target="_blank">
                         <li>
                             <IconImg alt="icon" src={require('../images/svg/facebook-logo.svg')} />
-                        </li>
-                    </a>
-                    <a href="https://www.instagram.com/john_nathan96/" target="_blank">
-                        <li>
-                            <IconImg alt="icon" src={require('../images/svg/insta.svg')} />
                         </li>
                     </a>
                     <a href="https://www.linkedin.com/in/john-nathan-michielsens/" target="_blank">
