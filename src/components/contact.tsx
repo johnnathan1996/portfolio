@@ -95,20 +95,20 @@ export const Contact = () => {
 
             <Grid>
                 <Row center="xs">
-                    <InputCol xs={5}>
-                        <InputForm type="text" placeholder="Prénom" />
+                    <InputCol xs={6} md={5}>
+                        <InputForm type="text" placeholder="First name" />
                     </InputCol>
-                    <InputCol xs={5}>
-                        <InputForm type="text" placeholder="Nom" />
+                    <InputCol xs={6} md={5}>
+                        <InputForm type="text" placeholder="Last name" />
                     </InputCol>
                 </Row>
                 <Row center="xs">
-                    <InputCol xs={10}>
+                    <InputCol xs={12} md={10}>
                         <InputForm type="text" placeholder="Email" />
                     </InputCol>
                 </Row>
                 <Row center="xs">
-                    <InputCol xs={10}>
+                    <InputCol xs={12} md={10}>
                         <AreaForm placeholder="Message" />
                     </InputCol>
                 </Row>
@@ -116,7 +116,7 @@ export const Contact = () => {
                     <Col xs={1}>
                         <Row center="xs">
                             <Mailto email="johnkodokan@gmail.be" subject="Hello and Welcome" body="Hello world!">
-                                Envoyer
+                                Send
                     </Mailto>
                         </Row>
                     </Col>
@@ -126,7 +126,7 @@ export const Contact = () => {
 
         <Footer>
             <FooterContainer>
-                <p>Copyright © 2020 | Portfolio de John-Nathan Michielsens</p>
+                <p>Copyright © 2020 | Portfolio of John-Nathan Michielsens</p>
                 <FooterList>
                     <a href="https://www.facebook.com/johnnathan.michielsens1" target="_blank">
                         <li>

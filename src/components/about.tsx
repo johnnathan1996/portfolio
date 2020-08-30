@@ -5,7 +5,7 @@ import { Parallax } from 'react-parallax';
 
 const Container = styled.div`
     height: 80vh;
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 10vh 0;
     display: flex;
@@ -30,7 +30,12 @@ const DisplayImage = styled(Col)`
 
 
 const ParallaxImg = styled(Parallax)`
-overflow: visible !important;
+    overflow: visible !important;
+`;
+
+const SpanText = styled.span`
+    color: #2c3e50;
+    font-weight: 800;
 `;
 
 
@@ -39,14 +44,19 @@ export const About = () => {
 
 
 
-        <DisplayText xs={5} >
+        <DisplayText xs={11} md={5}>
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing
+            <p>Young graduate in multimedia and communication technologies, I am a web and mobile applications developer. 
+            I have advanced notions in <SpanText>design</SpanText> and I work with <SpanText>UX/UI</SpanText> techniques. </p>
+
+            <p>I develop my websites and applications with new technologies such as <SpanText>React, Flutter, Firebase, Node.</SpanText>
+            With my experience in the IT field, I have been able to work in teams or alone as a freelancer.</p>
+
+            <p>Open to any new proposition, I am motivated and above all passionate about what I do.</p>
         </DisplayText>
 
 
-        <DisplayImage xs={5} >
+        <DisplayImage xs={false} md={5}>
 
 
             <ParallaxImg
