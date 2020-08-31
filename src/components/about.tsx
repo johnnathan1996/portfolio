@@ -1,16 +1,13 @@
 import React from "react";
 import styled from 'styled-components';
-import { Col } from 'react-styled-flexboxgrid'
+import { Col, Row } from 'react-styled-flexboxgrid'
 import { Parallax } from 'react-parallax';
 
-const Container = styled.div`
+const Container = styled(Row)`
     height: 80vh;
     max-width: 1024px;
     margin: 0 auto;
     padding: 10vh 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 `;
 
 
@@ -24,12 +21,16 @@ const DisplayText = styled(Col)`
 
 const DisplayImage = styled(Col)`
     height: 100%;
-    margin-top: 200px;
 `;
 
 
 const ParallaxImg = styled(Parallax)`
     overflow: visible !important;
+    margin-top: 120px;
+
+    img {
+        width: 70%;
+    }
 `;
 
 const SpanText = styled.span`
@@ -37,9 +38,24 @@ const SpanText = styled.span`
     font-weight: 800;
 `;
 
+const ButtonCV = styled.button`
+    border: 2px solid #2c3e50;
+    border-radius: 2px;
+    background: white;
+    padding: 5px 10px;
+    transition: background 0.2s, color 0.2s;
+    color: #2c3e50;
+    cursor: pointer;
+    
+:hover {
+    background: #2c3e50;
+    color: white;
+}
+`;
+
 
 export const About = () => {
-    return <Container id="About">
+    return <Container id="About" bottom="xs" around="xs">
 
 
 
@@ -52,10 +68,14 @@ export const About = () => {
             With my experience in the IT field, I have been able to work in teams or alone as a freelancer.</p>
 
             <p>Open to any new proposition, I am motivated and above all passionate about what I do.</p>
+
+            <form method="get" action={require("../images/download/CV.pdf")}>
+				<ButtonCV type="submit"> Curriculum Vitae</ButtonCV>
+			</form>
         </DisplayText>
 
 
-        <DisplayImage xs={false} md={5}>
+        <DisplayImage xs={false} md={3}>
 
 
             <ParallaxImg

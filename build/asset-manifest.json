@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2fc0e6e.chunk.css",
-    "main.js": "/static/js/main.db32c30a.chunk.js",
-    "main.js.map": "/static/js/main.db32c30a.chunk.js.map",
+    "main.css": "/static/css/main.18bfdce9.chunk.css",
+    "main.js": "/static/js/main.40055a3a.chunk.js",
+    "main.js.map": "/static/js/main.40055a3a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
     "static/js/2.f862816c.chunk.js": "/static/js/2.f862816c.chunk.js",
     "static/js/2.f862816c.chunk.js.map": "/static/js/2.f862816c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.eeb3fe3082377292d37beb592df07b9f.js": "/precache-manifest.eeb3fe3082377292d37beb592df07b9f.js",
+    "precache-manifest.c47e533be0a5d82ecfb7798bcfc28cbb.js": "/precache-manifest.c47e533be0a5d82ecfb7798bcfc28cbb.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.d2fc0e6e.chunk.css.map": "/static/css/main.d2fc0e6e.chunk.css.map",
+    "static/css/main.18bfdce9.chunk.css.map": "/static/css/main.18bfdce9.chunk.css.map",
     "static/js/2.f862816c.chunk.js.LICENSE.txt": "/static/js/2.f862816c.chunk.js.LICENSE.txt",
-    "static/media/aboutMe.png": "/static/media/aboutMe.ef618a6a.png",
+    "static/media/CV.pdf": "/static/media/CV.c56b91f5.pdf",
+    "static/media/aboutMe.png": "/static/media/aboutMe.294c54eb.png",
     "static/media/banner.jpg": "/static/media/banner.6fe1bb06.jpg",
     "static/media/facebook-logo.svg": "/static/media/facebook-logo.5589ccee.svg",
     "static/media/github-logo.svg": "/static/media/github-logo.376bb23c.svg",
     "static/media/gluon_logo.png": "/static/media/gluon_logo.230582dc.png",
-    "static/media/insta.svg": "/static/media/insta.96d5e449.svg",
     "static/media/lbn_logo.png": "/static/media/lbn_logo.18c1430a.png",
     "static/media/linkedin-sign.svg": "/static/media/linkedin-sign.e7e232eb.svg",
     "static/media/sobema_logo.png": "/static/media/sobema_logo.a3c0b72c.png",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
     "static/js/2.f862816c.chunk.js",
-    "static/css/main.d2fc0e6e.chunk.css",
-    "static/js/main.db32c30a.chunk.js"
+    "static/css/main.18bfdce9.chunk.css",
+    "static/js/main.40055a3a.chunk.js"
   ]
 }

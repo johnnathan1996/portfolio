@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ba582932664b606591bc77377c933ff",
+    "revision": "c375d7030fb358bb6c23d40cd3733de5",
     "url": "/index.html"
   },
   {
-    "revision": "71d323dc4265607cb3ed",
-    "url": "/static/css/main.d2fc0e6e.chunk.css"
+    "revision": "74c86f092490ea1629e7",
+    "url": "/static/css/main.18bfdce9.chunk.css"
   },
   {
     "revision": "869bef6d08dd586c8416",
@@ -16,16 +16,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.f862816c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "71d323dc4265607cb3ed",
-    "url": "/static/js/main.db32c30a.chunk.js"
+    "revision": "74c86f092490ea1629e7",
+    "url": "/static/js/main.40055a3a.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
   },
   {
-    "revision": "ef618a6aab0f0b9a70edb164534bb7d9",
-    "url": "/static/media/aboutMe.ef618a6a.png"
+    "revision": "c56b91f57705d009f4e8a72411d66a32",
+    "url": "/static/media/CV.c56b91f5.pdf"
+  },
+  {
+    "revision": "294c54eb8488652a57288e5c4aa60580",
+    "url": "/static/media/aboutMe.294c54eb.png"
   },
   {
     "revision": "6fe1bb060565ed7ebf80d3eb5a7a4582",
@@ -42,10 +46,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "230582dc9a7d5c250697fb3d838fb00c",
     "url": "/static/media/gluon_logo.230582dc.png"
-  },
-  {
-    "revision": "96d5e449c41ecc282515f40baf7c403f",
-    "url": "/static/media/insta.96d5e449.svg"
   },
   {
     "revision": "18c1430ac6c85dcd7fdcd6d8e35989d1",
