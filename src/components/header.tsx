@@ -196,7 +196,7 @@ export const Header = () => {
                 <TitleName>
                     <Title className="titleName">john-nathan</Title>
                     <Hline />
-                    <p>Web and app developper</p>
+                    <p>Web and app developer</p>
                 </TitleName>
 
                 <ScrollDown />

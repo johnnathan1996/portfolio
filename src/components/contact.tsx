@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
+import emailjs from 'emailjs-com';
 
 const Container = styled.div`
     height: 80vh;
@@ -54,12 +55,21 @@ const AreaForm = styled.textarea`
     font-family: montserrat;
 `
 
-const InputButton = styled.a`
-    background: #2c3e50;
+const InputButton = styled.input`
+    background: white;
     width: 100%;
     text-align: center;
     padding: 10px 30px;
     border-radius: 5px;
+    border: 2px solid #2c3e50;
+    color: #2c3e50;
+    transition: color 0.2s, background 0.2s;
+    cursor: pointer;
+
+    :hover{
+        color: white;
+        background: #2c3e50;
+    }
 `;
 
 const Footer = styled.footer`
@@ -90,41 +100,61 @@ const FooterList = styled.ul`
 `
 
 export const Contact = () => {
+
+    function sendEmail(e : any) {
+
+        e.preventDefault();
+
+        emailjs.sendForm('Gmail', 'template_qina3zc', e.target, 'user_gRNDatQHGVncr5tJYt3H0')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+        e.target.reset()
+
+    }
+
     return <Container id="Contact">
         <div>
             <TitleContact>
                 Contact
         </TitleContact>
 
-            <Grid>
-                <Row center="xs">
-                    <InputCol xs={6} md={5}>
-                        <InputForm type="text" placeholder="First name" />
-                    </InputCol>
-                    <InputCol xs={6} md={5}>
-                        <InputForm type="text" placeholder="Last name" />
-                    </InputCol>
-                </Row>
-                <Row center="xs">
-                    <InputCol xs={12} md={10}>
-                        <InputForm type="text" placeholder="Email" />
-                    </InputCol>
-                </Row>
-                <Row center="xs">
-                    <InputCol xs={12} md={10}>
-                        <AreaForm placeholder="Message" />
-                    </InputCol>
-                </Row>
-                <Row center="xs">
-                    <Col xs={1}>
-                        <Row center="xs">
-                            <Mailto email="johnkodokan@gmail.be" subject="Hello and Welcome" body="Hello world!">
-                                Send
-                    </Mailto>
-                        </Row>
-                    </Col>
-                </Row>
-            </Grid>
+            <form onSubmit={sendEmail}>
+
+                <Grid>
+                    <Row center="xs">
+                        <InputCol xs={6} md={5}>
+                            <InputForm type="text" placeholder="First name" name="firstname"/>
+                        </InputCol>
+                        <InputCol xs={6} md={5}>
+                            <InputForm type="text" placeholder="Last name" name="lastname" />
+                        </InputCol>
+                    </Row>
+                    <Row center="xs">
+                        <InputCol xs={12} md={10}>
+                            <InputForm type="text" placeholder="Email" name="fromemail" />
+                        </InputCol>
+                    </Row>
+                    <Row center="xs">
+                        <InputCol xs={12} md={10}>
+                            <AreaForm placeholder="Message" name="message" />
+                        </InputCol>
+                    </Row>
+                    <Row center="xs">
+                        <Col xs={1}>
+                            <Row center="xs">
+
+                                <InputButton type="submit" value="Send" />
+
+                            </Row>
+                        </Col>
+                    </Row>
+                </Grid>
+
+            </form>
         </div>
 
         <Footer>
@@ -151,16 +181,4 @@ export const Contact = () => {
         </Footer>
 
     </Container>
-}
-
-
-function Mailto({ email, subject, body, ...props }: {
-    [x: string]: any;
-    email: string;
-    subject: string;
-    body: string;
-}) {
-    return (
-        <InputButton href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`}>{props.children}</InputButton>
-    );
 }
