@@ -38,7 +38,7 @@ const SpanText = styled.span`
     font-weight: 800;
 `;
 
-const ButtonCV = styled.button`
+const ButtonCV = styled.a`
     border: 2px solid #2c3e50;
     border-radius: 2px;
     background: white;
@@ -46,6 +46,8 @@ const ButtonCV = styled.button`
     transition: background 0.2s, color 0.2s;
     color: #2c3e50;
     cursor: pointer;
+    font-size: 0.8em;
+    font-weight: bold;
     
 :hover {
     background: #2c3e50;
@@ -69,9 +71,7 @@ export const About = () => {
 
             <p>Open to any new proposition, I am motivated and above all passionate about what I do.</p>
 
-            <form method="get" action={require("../images/download/CV.pdf")}>
-				<ButtonCV type="submit"> Curriculum Vitae</ButtonCV>
-			</form>
+            <ButtonCV href={require("../images/download/CV.pdf")} target="_blank">Curriculum Vitae</ButtonCV>
         </DisplayText>
 
 
